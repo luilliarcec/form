@@ -22,6 +22,7 @@ return [
     \Styde\Form\View\Components\Fields\Selectables\Radio::class => 'radio',
     \Styde\Form\View\Components\Fields\Selectables\RadioMultiple::class => 'radio-multiple',
     \Styde\Form\View\Components\Fields\Selectables\Checkbox::class => 'checkbox',
+    \Styde\Form\View\Components\Fields\Selectables\CheckboxMultiple::class => 'checkbox-multiple',
     \Styde\Form\Field::class => 'field',
     \Styde\Form\SelectField::class => 'field-select',
     \Styde\Form\CheckboxField::class => 'field-checkbox',
