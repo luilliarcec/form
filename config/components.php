@@ -11,6 +11,7 @@ return [
     \Styde\Form\View\Components\Fields\Inputs\Text::class => 'input-text',
     \Styde\Form\View\Components\Fields\Inputs\Number::class => 'input-number',
     \Styde\Form\View\Components\Fields\Inputs\Password::class => 'input-password',
+    \Styde\Form\View\Components\Fields\Inputs\Email::class => 'input-email',
     \Styde\Form\Field::class => 'field',
     \Styde\Form\PasswordField::class => 'field-password',
     \Styde\Form\NumberField::class => 'field-number',
