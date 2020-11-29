@@ -9,6 +9,7 @@ return [
     \Styde\Form\View\Components\Feedback::class => 'feedback',
     \Styde\Form\View\Components\Fields\Inputs\Input::class => 'input',
     \Styde\Form\View\Components\Fields\Inputs\Text::class => 'input-text',
+    \Styde\Form\View\Components\Fields\Inputs\Number::class => 'input-number',
     \Styde\Form\Field::class => 'field',
     \Styde\Form\PasswordField::class => 'field-password',
     \Styde\Form\NumberField::class => 'field-number',
