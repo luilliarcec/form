@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     \Styde\Form\View\Components\Form::class => 'form',
     \Styde\Form\View\Components\FormGroup::class => 'form-group',
     \Styde\Form\View\Components\Label::class => 'label',
@@ -24,6 +23,7 @@ return [
     \Styde\Form\View\Components\Fields\Selectables\Checkbox::class => 'checkbox',
     \Styde\Form\View\Components\Fields\Selectables\CheckboxMultiple::class => 'checkbox-multiple',
     \Styde\Form\View\Components\Fields\Selectables\Switche::class => 'switch',
+    \Styde\Form\View\Components\Fields\Selectables\SwitcheMultiple::class => 'switch-multiple',
     \Styde\Form\Field::class => 'field',
     \Styde\Form\SelectField::class => 'field-select',
     \Styde\Form\CheckboxField::class => 'field-checkbox',
