@@ -7,6 +7,7 @@ return [
     \Styde\Form\View\Components\Label::class => 'label',
     \Styde\Form\View\Components\Help::class => 'help',
     \Styde\Form\View\Components\Feedback::class => 'feedback',
+    \Styde\Form\View\Components\Fields\Inputs\Input::class => 'input',
     \Styde\Form\Field::class => 'field',
     \Styde\Form\PasswordField::class => 'field-password',
     \Styde\Form\NumberField::class => 'field-number',
