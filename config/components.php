@@ -24,5 +24,4 @@ return [
     \Styde\Form\View\Components\Fields\Selectables\CheckboxMultiple::class => 'checkbox-multiple',
     \Styde\Form\View\Components\Fields\Selectables\Switche::class => 'switch',
     \Styde\Form\View\Components\Fields\Selectables\SwitcheMultiple::class => 'switch-multiple',
-    \Styde\Form\SubmitButton::class => 'submit',
 ];
