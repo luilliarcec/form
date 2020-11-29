@@ -24,10 +24,5 @@ return [
     \Styde\Form\View\Components\Fields\Selectables\CheckboxMultiple::class => 'checkbox-multiple',
     \Styde\Form\View\Components\Fields\Selectables\Switche::class => 'switch',
     \Styde\Form\View\Components\Fields\Selectables\SwitcheMultiple::class => 'switch-multiple',
-    \Styde\Form\Field::class => 'field',
-    \Styde\Form\SelectField::class => 'field-select',
-    \Styde\Form\CheckboxField::class => 'field-checkbox',
-    \Styde\Form\RadioField::class => 'field-radio',
     \Styde\Form\SubmitButton::class => 'submit',
-    \Styde\Form\SwitchField::class => 'field-switch',
 ];
