@@ -15,6 +15,7 @@ return [
     \Styde\Form\View\Components\Fields\Inputs\Url::class => 'input-url',
     \Styde\Form\View\Components\Fields\Inputs\Search::class => 'input-search',
     \Styde\Form\View\Components\Fields\Inputs\File::class => 'input-file',
+    \Styde\Form\View\Components\Fields\Inputs\Range::class => 'input-range',
     \Styde\Form\Field::class => 'field',
     \Styde\Form\PasswordField::class => 'field-password',
     \Styde\Form\NumberField::class => 'field-number',
