@@ -19,6 +19,7 @@ return [
     \Styde\Form\View\Components\Fields\Inputs\Textarea::class => 'textarea',
     \Styde\Form\View\Components\Fields\Selectables\Select::class => 'select',
     \Styde\Form\View\Components\Fields\Selectables\SelectMultiple::class => 'select-multiple',
+    \Styde\Form\View\Components\Fields\Selectables\Radio::class => 'radio',
     \Styde\Form\Field::class => 'field',
     \Styde\Form\SelectField::class => 'field-select',
     \Styde\Form\CheckboxField::class => 'field-checkbox',
