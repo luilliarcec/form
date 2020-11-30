@@ -115,6 +115,7 @@ For example,
 * Everyone can get the value(s) of the model passed to the form
 * If the field in question has an error (Laravel validations), 
 the value will be taken from the old helper that brings the last value entered.
+* If you don't pass a value to the label attribute, the name passed will be used as a label.
 * You can pass html attributes to it as if it were a normal field, example:
 
 ```html
@@ -157,7 +158,125 @@ Next we will see each of the types of inputs that this package provides
 * Textarea `<x-textarea/>`
 * Input `<x-input/>`
 
+#### Selectables
 
+The selection fields are somewhat different.
+
+These receive depending on whether they are unique or multiple, 
+the `option` parameter and `options`, respectively.
+
+A common behavior between selection fields (except select and select-multiple) 
+is that, in unique fields, the label becomes the selection label, 
+while in multiple-selection fields the label is the title label. For example:
+
+* Single
+
+```html
+<x-checkbox name="is_admin" label="Is Administrator"/>
+
+<!-- It will look like -->
+
+<div id="field-group-is_admin" class="...">
+    <input type="checkbox" id="field-is_admin" name="is_admin" value="true" class="..." >
+    <label class="..." for="field-is_admin">Is Administrator</label>
+</div>
+```
+
+* Multiple
+
+```html
+<x-checkbox-multiple name="languages[]" label="Programming languages" :options="$options"/>
+
+<!-- It will look like -->
+
+<div id="field-group-languages" class="...">
+    <label>Programming languages<span class="...">Optional</span></label>
+    <br>
+    ...
+</div>
+```
+
+* Select `<x-select/>`
+* Select Multiple `<x-select-multiple/>`
+* Radio `<x-radio/>`
+* Radio Multiple `<x-radio-multiple/>`
+* Checkbox `<x-checkbox/>`
+* Checkbox Multiple `<x-checkbox-multiple/>`
+* Switch `<x-switch/>`
+* Switch Multiple `<x-switch-multiple/>`
+
+As you could see, in the case above in the singular 
+checkbox the option attribute was not required. However, 
+this is not always the case.
+
+##### Select `<x-select/>`
+
+The select field receives `options` as a non-mandatory parameter, 
+said parameter must be an array `['key' => 'value']`. 
+However, we know that many times you want to be able to render the `options` 
+to your liking, for this reason we have provided a `slot` for the options.
+
+```html
+<x-select name="brands">...your options</x-select>
+```
+
+However, using this option `slot` functionality makes you 
+lose the ability to get the values from the form model, 
+as well as the old values.
+
+If you want to have a default value or empty value, you can do it using the `empty slot`.:
+
+```html
+<x-select name="brands">
+    <x-slot name="empty">
+        <option>Select a brand</option>
+    </x-slot>
+</x-select>
+```
+
+If you want to select a default option you can pass the value attribute, with the option to select.
+
+##### Select Multiple `<x-select-multiple/>`
+
+In the same way as the singular select, the multiple 
+select has the optional parameter that is not mandatory. 
+However, the difference with its singular brother is that 
+the value parameter will only accept arrays with the options to be selected.
+
+##### Radio `<x-radio/>`
+
+This component necessarily needs the `option` attribute. 
+This component changes the generation of its `label` a bit, 
+since the `label` to be rendered will come out of the `option` attribute.
+However you can `override` this behavior by passing the `label` to use, as with the other `components`.
+
+##### Radio Multiple `<x-radio-multiple/>`
+
+Like its singular sibling, the `options` parameter 
+is mandatory and must be an array `['key' => 'value']`.
+
+However, as it is a field with `multiple` options, 
+the `label` of each option will come out of the provided `array`, 
+and the `label` that is generated from the `name` or the one you pass will be placed as the `title`,
+as explained above.
+
+##### Checkbox `<x-checkbox/>`
+
+This component shares similarities with `<x-radio>`. 
+Only this does not necessarily need the `option` parameter, 
+since its default value is `true`, this singular component 
+is useful for fields such as ***"Is admin"*** or ***"Is active"***, 
+in the same way the label is generated from the `name` or 
+the one that has passed as a parameter is used.
+
+##### Checkbox Multiple `<x-checkbox-multiple/>`
+
+In the same way, the behavior of this component is similar to multiple radius.
+
+##### Switch and Switch Multiple
+
+These components are an inheritance of checkbox and multiple checkbox respectively. 
+So its behavior is the same, but its design is not.
 
 ## Security 
 
