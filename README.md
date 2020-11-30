@@ -80,20 +80,20 @@ $model = new User([
     <input type="hidden" name="_token" value="">
     <input type="hidden" name="_method" value="put">
 
-    <div id="field-group-name" class="form-group">
-        <label for="field-name">Name<span class="badge badge-danger">Optional</span></label>
-        <input type="text" id="field-name" name="name" value="Luis Andrés" class="form-control">
+    <div id="field-group-name" class="...">
+        <label for="field-name">Name<span class="...">Optional</span></label>
+        <input type="text" id="field-name" name="name" value="Luis Andrés" class="...">
     </div>
 
-    <div id="field-group-password" class="form-group">
-        <label for="field-password">Password<span class="badge badge-danger">Optional</span></label>
-        <input type="password" id="field-password" name="password" value="" class="form-control">
+    <div id="field-group-password" class="...">
+        <label for="field-password">Password<span class="...">Optional</span></label>
+        <input type="password" id="field-password" name="password" value="" class="...">
     </div>
 </form>
 ```
 
 Surely by now, you already have many questions, 
-such as ***why is there an Optional badge?*** or 
+such as ***why is there an Optional highlight span?*** or 
 ***why is the name shown but not the password?***
 
 Quiet we will get to explain everything that involves the fields,
@@ -271,7 +271,7 @@ the one that has passed as a parameter is used.
 
 ##### Checkbox Multiple `<x-checkbox-multiple/>`
 
-In the same way, the behavior of this component is similar to multiple radius.
+In the same way, the behavior of this component is similar to multiple radio's.
 
 ##### Switch and Switch Multiple
 
