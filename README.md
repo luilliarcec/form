@@ -5,7 +5,7 @@ Advanced Form Generator for Laravel 7 or higher.
 ## Documentation
 
 The form builder uses the Html-like syntax provided since Laravel 7 in Blade. 
-So one of the components will look like `<x-input>`, 
+So one of the components will look like `<x-input/>`, 
 later we will analyze each of the components that this package includes.
 
 ### Form
@@ -103,6 +103,61 @@ Quiet we will get to explain everything that involves the fields,
 
 Note that if any property is set to `hidden` in your model, 
 it will not be shown, that's why the password is not shown.
+
+### Fields
+
+We have separated the fields into two groups, the input and the selectable ones.
+However, all these fields share many similarities and very epic functionalities.
+
+For example,
+
+* All must have a mandatory name.
+* Everyone can get the value(s) of the model passed to the form
+* If the field in question has an error (Laravel validations), 
+the value will be taken from the old helper that brings the last value entered.
+* You can pass html attributes to it as if it were a normal field, example:
+
+```html
+<x-input-text name="test" class="mt-5" maxlength="10" value="Luis"/>
+```
+
+```html
+<x-select name="test-select" class="mt-5" required/>
+```
+
+* You can pass a help text to it by adding the help attribute to the field, example: 
+
+```html
+<x-input-text name="test" help="This is a help text."/>
+```
+
+```html
+<x-select name="test-select" help="This is a help text."/>
+```
+
+* If a field has an error (Laravel validations), 
+this field will automatically show a feedback of the error and the css 
+styles will be applied to that field.
+
+#### Inputs
+
+If you remember above we mentioned `<x-input/>`, 
+however we recommend the use of dedicated inputs for example `<x-input-text/>`, 
+however the use of `<x-input/>` is for types like (`color`, `date`, `month`, and similars). 
+Next we will see each of the types of inputs that this package provides
+
+* Input Text `<x-input-text/>`
+* Input Number `<x-input-number/>`
+* Input Password `<x-input-password/>`
+* Input Email `<x-input-email/>`
+* Input Url `<x-input-url/>`
+* Input Search `<x-input-search/>`
+* Input File `<x-input-file/>`
+* Input Range `<x-input-range/>`
+* Textarea `<x-textarea/>`
+* Input `<x-input/>`
+
+
 
 ## Security 
 
