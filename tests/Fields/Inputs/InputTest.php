@@ -28,6 +28,30 @@ class InputTest extends TestCase
     }
 
     /** @test */
+    public function render_input_with_attributes()
+    {
+        $this->template('<x-input name="test" class="mt-5" maxlength="10" value="Luis"/>')
+            ->assertRender('
+                <div id="field-group-test" class="form-group">
+                    <label for="field-test"> Test <span class="badge badge-danger">Optional</span> </label>
+                    <input type="text" id="field-test" name="test" value="Luis" class="form-control mt-5" maxlength="10">
+                </div>
+            ');
+    }
+
+    /** @test */
+    public function render_input_with_help_attribute()
+    {
+        $this->template('<x-input name="test" help="This is a help text."/>')
+            ->assertRender('
+                <div id="field-group-test" class="form-group">
+                    <label for="field-test"> Test <span class="badge badge-danger">Optional</span> </label>
+                    <input type="text" id="field-test" name="test" value="" class="form-control">
+                    <small class="form-text text-muted">This is a help text.</small></div>
+            ');
+    }
+
+    /** @test */
     function render_input_type_color()
     {
         $this->template('<x-input type="color" name="name"/>')
