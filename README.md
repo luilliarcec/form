@@ -1,4 +1,6 @@
-# Styde Form
+![StydeForm](./assets/styde-form.jpg)
+
+# Form
 
 Advanced Form Generator for Laravel 7 or higher.
 
