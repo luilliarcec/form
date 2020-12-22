@@ -51,7 +51,7 @@ class Checkbox extends Field
     public function isChecked(string $key, bool $hasErrors = false)
     {
         if (!$hasErrors) {
-            return $this->value || (string)$key == (string)$this->value ? ' checked' : '';
+            return (!is_object($this->value) && $this->value) || (string)$key == (string)$this->value ? ' checked' : '';
         } else {
             return $key == old($this->cleanName) ? ' checked' : '';
         }
