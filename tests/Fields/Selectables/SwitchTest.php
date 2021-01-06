@@ -115,7 +115,8 @@ class SwitchTest extends TestCase
     /** @test */
     function render_a_switch_field_with_errors()
     {
-        $this->app['view']->share('errors',
+        $this->app['view']->share(
+            'errors',
             (new ViewErrorBag())
                 ->put('default', new MessageBag(['is_admin' => 'Invalid values']))
         );

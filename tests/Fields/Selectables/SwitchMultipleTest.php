@@ -255,7 +255,8 @@ class SwitchMultipleTest extends TestCase
     /** @test */
     function render_a_checkbox_field_with_errors()
     {
-        $this->app['view']->share('errors',
+        $this->app['view']->share(
+            'errors',
             (new ViewErrorBag())
                 ->put('default', new MessageBag(['languages' => 'Invalid values']))
         );
