@@ -74,7 +74,8 @@ class EmailTest extends TestCase
     /** @test */
     function check_that_error_text_is_displayed()
     {
-        $this->app['view']->share('errors',
+        $this->app['view']->share(
+            'errors',
             (new ViewErrorBag())
                 ->put('default', new MessageBag(['name' => 'Invalid values']))
         );
@@ -86,7 +87,8 @@ class EmailTest extends TestCase
     /** @test */
     function check_that_error_class_is_displayed()
     {
-        $this->app['view']->share('errors',
+        $this->app['view']->share(
+            'errors',
             (new ViewErrorBag())
                 ->put('default', new MessageBag(['name' => 'Invalid values']))
         );

@@ -63,11 +63,13 @@ abstract class Field extends Component
      */
     public function highlight()
     {
-        if ($this->config->get('form.highlights_requirement') === 'required' && $this->isRequired())
+        if ($this->config->get('form.highlights_requirement') === 'required' && $this->isRequired()) {
             return __('styde-form::field.required');
+        }
 
-        if ($this->config->get('form.highlights_requirement') === 'optional' && !$this->isRequired())
+        if ($this->config->get('form.highlights_requirement') === 'optional' && !$this->isRequired()) {
             return __('styde-form::field.optional');
+        }
 
         return null;
     }
