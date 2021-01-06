@@ -1,5 +1,5 @@
 {
-    "name": "styde/form",
+    "name": "luilliarcec/form",
     "description": "Advanced form generation for Laravel",
     "type": "library",
     "require": {
